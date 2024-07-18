@@ -1,5 +1,3 @@
-const title = document.getElementById("title");
+const title = document.querySelector(".hello h1");
 
-title.innerText = "Got you!";
-// 보여줄 수 있는걸 보여주는 역할.
-console.dir(title);
+console.log(title);
