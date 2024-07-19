@@ -10,3 +10,7 @@ h1 {
 .active {
   color: tomato;
 }
+
+.font {
+  font-family: "Times New Roman", Times, serif;
+}
