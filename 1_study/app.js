@@ -3,24 +3,15 @@ const h1 = document.querySelector(".hello h1");
 console.dir(h1);
 
 function handleH1Click() {
-  console.log("h1 was clicked!");
-  h1.style.color = "blue";
-}
-
-function handleMouseEnter() {
-  h1.innerText = "Mouse is here!";
-}
-
-function handleMouseLeave() {
-  h1.innerText = "Mouse is gone!";
+  const currentColor = h1.style.color;
+  let newColor;
+  // let은 재할당이 가능하니까, 일단 값을 비워둠.
+  if (currentColor === "blue") {
+    newColor = "tomato";
+  } else {
+    newColor = "blue";
+  }
+  h1.style.color = newColor;
 }
 
 h1.addEventListener("click", handleH1Click);
-h1.addEventListener("mouseenter", handleMouseEnter);
-h1.addEventListener("mouseleave", handleMouseLeave);
-
-function handleWindowResize() {
-  document.body.style.backgroundColor = "tomato";
-}
-
-window.addEventListener("resize", handleWindowResize);
