@@ -1,10 +1,9 @@
-const h1 = document.querySelector(".hello h1");
+const loginInput = document.querySelector("#login-form input");
+const loginButton = document.querySelector("#login-form button");
 
-console.dir(h1);
-
-function handleH1Click() {
-  h1.classList.toggle("active");
-  // "active"같은 string이 반복되면 따로 함수를 설정해도 됨.
+function onLoginBtnClick() {
+  console.log(loginInput.value);
+  console.log("click");
 }
 
-h1.addEventListener("click", handleH1Click);
+loginButton.addEventListener("click", onLoginBtnClick);
