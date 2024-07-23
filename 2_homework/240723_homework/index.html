@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>240723_homework</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <h1>Random Number Game</h1>
+    <form class="form-numbers">
+      <div>
+        <span class="bold">Generate a number between 0 and</span>
+        <input
+          class="number1"
+          required
+          min="0"
+          type="number"
+          placeholder="number1"
+        />
+      </div>
+      <div>
+        <span>Guess the number:</span>
+        <input
+          class="number2"
+          required
+          min="0"
+          type="number"
+          placeholder="number2"
+        />
+        <button>Play!</button>
+      </div>
+    </form>
+    <div>
+      <span class="hidden info"></span>
+    </div>
+    <div>
+      <span class="hidden result bold"></span>
+    </div>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
