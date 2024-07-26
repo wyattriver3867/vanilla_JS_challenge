@@ -5,7 +5,8 @@ const toDoList = document.getElementById("todo-list");
 const TODOS_KEY = "todos";
 
 // 만든 toDo를 저장하는 Array.
-const toDos = [];
+// 이전에 작성한 toDo를 저장하기 위해서 let으로 작성해야 한다. (재정의=업데이트 가능)
+let toDos = [];
 
 function deleteToDo(event) {
   // 부모 엘리먼트 li를 찾고 지움.
@@ -55,15 +56,12 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 // localStorage에 저장된 값 불러오기. (string인 상태)
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-// array로 된 저장된 값들에 실행할 function함수.
-// function sayHello() {
-//   console.log();
-// }
-
 if (saveToDos) {
   // saveToDos가 존재한다면~ 이란 뜻.
   // JSON.parse로 array로 만들기. (저장된 값은 string이므로)
-  // 지금 parsedToDos에 적은 방식이 더 간결한 방식임.
   const parsedToDos = JSON.parse(savedToDos);
-  parsedToDos.forEach((item) => console.log(item));
+  // toDos 어레이에 localStorage에 저장된 값 업데이트하기.
+  toDos = parsedToDos;
+  // array의 item에 paintToDo함수 실행하기.
+  parsedToDos.forEach(paintToDo);
 }
