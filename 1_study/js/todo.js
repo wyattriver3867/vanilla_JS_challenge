@@ -1,6 +1,8 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
+// 실수를 방지하기 위한 변수-스트링.
+const TODOS_KEY = "todos";
 
 // 만든 toDo를 저장하는 Array.
 const toDos = [];
@@ -12,7 +14,8 @@ function deleteToDo(event) {
 }
 
 function saveToDos() {
-  // 나중에 localStorage에서 값을 불러오기 위해선 값을 string으로 변환해야 한다.
+  // localStorage에 저장하기.
+  // localStorage는 string만 받아서 변환해야 함.
   localStorage.setItem("todos", JSON.stringify(toDos));
 }
 
@@ -48,3 +51,18 @@ function handleToDoSubmit(event) {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+// localStorage에 저장된 값 불러오기. (string인 상태)
+const savedToDos = localStorage.getItem(TODOS_KEY);
+
+// array로 된 저장된 값들에 실행할 function함수.
+// function sayHello() {
+//   console.log();
+// }
+
+if (saveToDos) {
+  // saveToDos가 존재한다면~ 이란 뜻.
+  // JSON.parse로 array로 만들기. (저장된 값은 string이므로)
+  const parsedToDos = JSON.parse(savedToDos);
+  parsedToDos.forEach((item) => console.log(item));
+}
