@@ -39,7 +39,9 @@ function makeGradient() {
 
   // 색1과 색2의 색이 동일할 때, 색2를 다시 고름.
   if (color1 === color2) {
-    const color2 = colors[Math.floor(Math.random() * colors.length)];
+    // 더 좋은 방법. 이렇게 함수 내부에 자기 자신을 호출하는걸 '재귀 함수'라고 함.
+    return makeGradient();
+    // const color2 = colors[Math.floor(Math.random() * colors.length)];
     injection();
   } else {
     injection();
