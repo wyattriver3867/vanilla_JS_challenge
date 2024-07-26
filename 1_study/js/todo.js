@@ -63,6 +63,7 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if (saveToDos) {
   // saveToDos가 존재한다면~ 이란 뜻.
   // JSON.parse로 array로 만들기. (저장된 값은 string이므로)
+  // 지금 parsedToDos에 적은 방식이 더 간결한 방식임.
   const parsedToDos = JSON.parse(savedToDos);
   parsedToDos.forEach((item) => console.log(item));
 }
