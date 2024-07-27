@@ -8,33 +8,34 @@ const TODOS_KEY = "todos";
 // 이전에 작성한 toDo를 저장하기 위해서 let으로 작성해야 한다. (재정의=업데이트 가능)
 let toDos = [];
 
-function deleteToDo(event) {
-  // 부모 엘리먼트 li를 찾고 지움.
-  const li = event.target.parentElement;
-  li.remove();
-}
-
 function saveToDos() {
   // localStorage에 저장하기.
   // localStorage는 string만 받아서 변환해야 함.
-  localStorage.setItem("todos", JSON.stringify(toDos));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+}
+
+function deleteToDo(event) {
+  // 부모 엘리먼트 li를 찾고 지움.
+  const li = event.target.parentElement;
+  console.log(li.id);
+  li.remove();
 }
 
 function paintToDo(newTodo) {
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
+  span.innerText = newTodo.text;
+
   const button = document.createElement("button");
+  button.innerText = "delete";
+  // 코드에 이모지를 넣어도 작동한다.
+  button.addEventListener("click", deleteToDo);
 
   li.appendChild(span);
   li.appendChild(button);
 
-  span.innerText = newTodo;
-  button.innerText = "delete😂";
-  // 코드에 이모지를 넣어도 작동한다.
-
   toDoList.appendChild(li);
-
-  button.addEventListener("click", deleteToDo);
 }
 
 function handleToDoSubmit(event) {
@@ -43,8 +44,12 @@ function handleToDoSubmit(event) {
   const newTodo = toDoInput.value;
   // 입력칸을 비우기.
   toDoInput.value = "";
-  // toDos 어레이에 넣기.
-  toDos.push(newTodo);
+  // toDos 어레이에 넣기. 넣고 빼기 위해 id부여 = object로 가공해야 함.
+  const newTodoObj = {
+    text: newTodo,
+    id: Date.now(),
+  };
+  toDos.push(newTodoObj);
   // toDo를 html에 넣어 표시하기.
   paintToDo(newTodo);
   // saveToDos 함수를 통해 localStorage에 저장하기. 값이 이미 들어가서, 괄호안에 안넣어도 됨.
@@ -56,7 +61,7 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 // localStorage에 저장된 값 불러오기. (string인 상태)
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-if (saveToDos) {
+if (saveToDos !== null) {
   // saveToDos가 존재한다면~ 이란 뜻.
   // JSON.parse로 array로 만들기. (저장된 값은 string이므로)
   const parsedToDos = JSON.parse(savedToDos);
