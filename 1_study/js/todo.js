@@ -65,7 +65,7 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos !== null) {
-  // savedToDos가 존재한다면~ 이란 뜻.
+  // savedToDos가 존재한다면~ 이란 뜻. (null이 아니라면)
   // JSON.parse로 array로 만들기. (저장된 값은 string이므로)
   const parsedToDos = JSON.parse(savedToDos);
   // toDos 어레이에 localStorage에 저장된 값 업데이트하기.
