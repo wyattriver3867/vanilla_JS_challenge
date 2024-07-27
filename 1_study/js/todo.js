@@ -15,11 +15,15 @@ function saveToDos() {
 }
 
 function deleteToDo(event) {
-  // 부모 엘리먼트 li를 찾고 지움.
+  // 부모 엘리먼트 li를 찾음=정의함.
   const li = event.target.parentElement;
-  // localStorage에서도 지우기 위해 id 값을 가져옴.
-  console.log(li.id);
+  // 부모 엘리먼트 li를 삭제함.
   li.remove();
+  // localStorage에서도 삭제=제외하기 위해 filter을 사용한다. 그리고 array를 업데이트 한다.
+  // li.id가 string이므로 int로 변환해줘야 함.
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  // toDos 어레이가 새로 업데이트 됐으므로, saveToDos를 한번 더 작동해야 한다. (새로고침?)
+  saveToDos();
 }
 
 function paintToDo(newTodo) {
@@ -65,11 +69,11 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
 if (savedToDos !== null) {
-  // savedToDos가 존재한다면~ 이란 뜻. (null이 아니라면)
-  // JSON.parse로 array로 만들기. (저장된 값은 string이므로)
+  // savedToDos가 존재한다면~ 이란 뜻. (= null이 아니라면)
+  // JSON.parse로 array로 만들기. (localStorage에 저장된 값들은 string이므로)
   const parsedToDos = JSON.parse(savedToDos);
   // toDos 어레이에 localStorage에 저장된 값 업데이트하기.
   toDos = parsedToDos;
-  // array의 item에 paintToDo함수 실행하기.
+  // array의 item에 paintToDo함수 실행하기. = 결과적으로 저장된 todo값들이 다시 html에 쓰여지게 된다.
   parsedToDos.forEach(paintToDo);
 }
