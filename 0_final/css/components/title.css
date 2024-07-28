@@ -1,13 +1,9 @@
 .body__name {
   height: 85px;
-  background-color: black;
 
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-}
-
-.body__name div {
 }
 
 .body__name div span {
@@ -29,11 +25,11 @@
 .body__name div:first-child div {
   width: 95%;
   height: 15px;
-  border-top: var(--border-gray);
+  border-top: solid 2px var(--color-transGray2);
 }
 
 .body__name div:last-child div {
   width: 100%;
   height: 15px;
-  border-top: var(--border-gray);
+  border-top: solid 2px var(--color-transGray2);
 }

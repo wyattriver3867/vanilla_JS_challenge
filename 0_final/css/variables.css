@@ -1,9 +1,8 @@
 :root {
   --horizontal-space: 5.7vw;
-  --border-gray: 2.5px solid gray;
-
-  --yellow: #fae100;
-  --main-border: 5px solid rgba(0, 0, 0, 0.2);
-  --color-gray: rgba(0, 0, 0, 0.5);
-  --color-lessBlack: rgba(0, 0, 0, 0.8);
+  --color-transBlack: rgba(0, 0, 0, 0.95);
+  --color-transWhite: rgba(255, 255, 255, 0.85);
+  --color-transGray: rgba(255, 255, 255, 0.3);
+  --color-transGray2: rgba(255, 255, 255, 0.65);
+  --color-transOrange: rgba(255, 165, 0, 0.85);
 }

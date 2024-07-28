@@ -10,25 +10,31 @@ function onGeoOk(data) {
     .then((response) => response.json())
     .then((data) => {
       const city = document.querySelector(".weather-location");
-      const weather = document.querySelector("#weather span:nth-child(2)");
-      const weatherDesc = document.querySelector("#weather span:nth-child(3)");
-      const temp = document.querySelector("#weather span:nth-child(4)");
-      const tempMax = document.querySelector("#weather span:nth-child(5)");
-      const tempMin = document.querySelector("#weather span:nth-child(6)");
-      const humidity = document.querySelector("#weather span:nth-child(7)");
+      const weather = document.querySelector(".weather-climate");
+      const weatherDesc = document.querySelector(".weather-climate-detail");
+      const temp = document.querySelector(".weather-temp-ave");
+      const tempMax = document.querySelector(".weather-temp-max");
+      const tempMin = document.querySelector(".weather-temp-min");
+      const humidity = document.querySelector(".weather-humid");
 
+      city.innerText = "";
       city.innerText = `${data.name}`;
-      weather.innerText = `날씨 ${data.weather[0].main}`;
-      weatherDesc.innerText = `${data.weather[0].description}한 날입니다.`;
-      temp.innerText = `평균 온도는 ${data.main.temp}°C입니다.`;
-      tempMax.innerText = `최고 온도는 ${data.main.temp_max}°C입니다.`;
-      tempMin.innerText = `최저 온도는 ${data.main.temp_min}°C입니다.`;
-      humidity.innerText = `습도는 ${data.main.humidity}%입니다.`;
+      weather.innerText = "";
+      weather.innerText = `${data.weather[0].main}`;
+      weatherDesc.innerText = `${data.weather[0].description}`;
+      temp.innerText = `• Temp Ave : ${data.main.temp}°C`;
+      tempMax.innerText = `• Temp Max : ${data.main.temp_max}°C`;
+      tempMin.innerText = `• Temp Min : ${data.main.temp_min}°C`;
+      humidity.innerText = `• Humidity : ${data.main.humidity}%`;
     });
 }
 
 function onGeoError() {
   alert("Can't load weather data in your location.");
+  const city = document.querySelector(".weather-location");
+  city.innerText = `Can't find your location`;
+  const weather = document.querySelector(".weather-climate");
+  weather.innerText = `Failed`;
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

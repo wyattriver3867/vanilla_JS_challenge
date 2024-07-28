@@ -9,60 +9,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Noto+Sans+KR:wght@100..900&display=swap");
 /* 한국어 일반, noto sans korean, variable, 100 to 900 */
 
-/* reset, variables */
+/* reset, variables, text */
 @import "reset.css";
 @import "variables.css";
+@import "text.css";
 
 /* Components */
+@import "components/logIn.css";
+@import "components/title.css";
+@import "components/main-upper.css";
+@import "components/main-lower.css";
+@import "components/quotes.css";
 @import "components/background.css";
-@import "components/clock.css";
-@import "components/greetings.css";
-@import "components/todo.css";
-@import "components/weather.css";
 
-@import "components/body__name.css";
-@import "components/body__main-upper.css";
-@import "components/body__main-lower.css";
-@import "components/body__quotes.css";
+body {
+  background-color: black;
+  position: relative;
+}
 
 .body-setting {
   padding: 0px var(--horizontal-space);
-}
-
-.text-title {
-  font-family: "Playfair Display", "noto sans korean";
-  font-style: italic;
-  font-weight: 500;
-  font-size: 83px;
-  color: white;
-}
-
-.text-normal {
-  font-family: "Kanit", "noto sans korean";
-}
-
-.text__body-name {
-  font-size: 15px;
-  color: white;
-}
-
-.text__body-main-lower {
-}
-
-.text__body-main-upper {
-  font-size: 30px;
-  font-weight: 500;
-}
-
-.text__body-quotes-author {
-  font-family: "Playfair Display", "noto sans korean";
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.text__body-quotes-text {
-  font-family: "Kanit", "noto sans korean";
-  font-size: 30px;
-  font-weight: 400;
 }

@@ -1,0 +1,183 @@
+.body__main-lower {
+  margin: 7px 0px 0px 0px;
+  height: 445px;
+  border-radius: 10px 10px 30px 30px;
+
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body__main-lower__box {
+  width: calc(100% - 25px);
+  height: calc(100% - 25px);
+  border: solid 3px var(--color-transGray);
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body__main-lower__box2 {
+  width: 96%;
+  height: 100%;
+}
+
+.body__main-lower__box3-1 {
+  height: 27%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.body__main-lower__box3-2 {
+  height: 6%;
+  margin: 0 0 5px 0;
+  border-bottom: solid 2px var(--color-transGray);
+}
+
+.body__main-lower__box3-3 {
+  height: 65%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.body__main-lower__box3-1__box1 {
+  width: 23.5%;
+  height: 120%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.body__main-lower__box3-1__box1 span {
+  display: block;
+  height: 12%;
+}
+
+.body__main-lower__box3-1__box2 {
+  width: 76.5%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.body__main-lower__box3-1__box2 span {
+  height: 60%;
+}
+
+.body__main-lower__box3-3__box1 {
+  width: 23.5%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.body__main-lower__box3-3__box2 {
+  width: 76.5%;
+  height: 100%;
+}
+
+.body__main-lower__box3-3__box2 ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.body__main-lower__box3-3__box1__weather1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.body__main-lower__box3-3__box1__weather2 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.body__main-lower__box3-3__box1__weather3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.body__main-lower__box3-3__box2__box {
+  height: 10px;
+  border-radius: 3px;
+  background: linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51));
+}
+
+#todo-form {
+  display: flex;
+  align-items: flex-end;
+
+  z-index: 1;
+}
+
+.input-toDo {
+  font-family: "Kanit", "noto sans korean";
+  font-size: 50px;
+  font-weight: 400;
+
+  text-align: left;
+  width: 730px;
+  height: 35px;
+  border: none;
+  background: none;
+}
+
+.input-toDo::placeholder {
+  color: rgba(0, 0, 0, 0.9);
+}
+.input-toDo:focus {
+  color: rgba(0, 0, 0, 0.7);
+  outline: none;
+}
+
+/* 버튼 */
+.body__main-lower__box3-3__box2 ul li {
+  padding: 15px 0 0 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+button {
+  width: 15px;
+  height: 15px;
+
+  background-color: rgb(252, 74, 26);
+  border: none;
+
+  font-size: 1px;
+  user-select: none;
+
+  /* font-weight: 600;
+  text-align: center;
+  line-height: 50px; */
+
+  border-radius: 50%;
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(247, 183, 51);
+}
+
+button:active {
+  background-color: rgb(255, 244, 222);
+}

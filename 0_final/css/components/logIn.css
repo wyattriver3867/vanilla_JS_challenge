@@ -1,0 +1,49 @@
+.hidden {
+  display: none;
+}
+
+#login-form {
+  position: relative;
+  z-index: 0;
+}
+
+.body__logIn {
+  height: 180px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.clock1 {
+  position: absolute;
+  left: -150px;
+  top: -60px;
+
+  user-select: none;
+}
+
+.input-logIn {
+  font-family: "Playfair Display", "noto sans korean";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 83px;
+  color: white;
+
+  text-align: left;
+  height: 105px;
+  width: 730px;
+  border: none;
+  border-bottom: solid 1px var(--color-transWhite);
+  background: none;
+  z-index: 5;
+}
+
+.input-logIn::placeholder {
+  color: var(--color-transWhite);
+}
+.input-logIn:focus {
+  outline: none;
+}

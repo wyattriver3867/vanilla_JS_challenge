@@ -1,0 +1,65 @@
+.text-title {
+  font-family: "Playfair Display", "noto sans korean";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 83px;
+  color: white;
+}
+
+.text-normal {
+  font-family: "Kanit", "noto sans korean";
+  color: var(--color-transBlack);
+}
+
+.text__clock1 {
+  font-family: "Kanit", "noto sans korean";
+  font-size: 450px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.text__body-name {
+  font-size: 17px;
+  color: var(--color-transWhite);
+}
+
+.text__body-main-lower1 {
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.text__body-main-lower2 {
+  font-size: 80px;
+}
+
+.text__body-main-lower3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.text__body-main-lower4 {
+  font-family: "Playfair Display", "noto sans korean";
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.text__body-main-upper {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.text__body-quotes-author {
+  font-family: "Playfair Display", "noto sans korean";
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-transWhite);
+}
+
+.text__body-quotes-text {
+  font-family: "Kanit", "noto sans korean";
+  font-size: 30px;
+  font-weight: 400;
+  color: var(--color-transWhite);
+}

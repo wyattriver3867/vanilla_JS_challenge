@@ -6,84 +6,117 @@
     <link rel="stylesheet" href="css/styles.css" />
     <title>Momentum-Clone</title>
   </head>
-  <body class="body-setting text-normal">
-    <form class="hidden" id="login-form">
-      <input
-        required
-        minlength="5"
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button>Log In</button>
-    </form>
-    <!-- 로그인, greetings.css -->
-    <div class="body__logIn text-title">
-      <span id="greeting" class="hidden"></span>
-    </div>
+  <body class="text-normal">
+    <img id="img" src="" alt="" />
+    <div class="body-setting">
+      <!-- 로그인, logIn.css -->
+      <div class="body__logIn text-title">
+        <span class="clock1 text__clock1">00:00:00</span>
+        <form class="hidden" id="login-form">
+          <input
+            class="input-logIn"
+            required
+            minlength="5"
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+          />
+          <!-- <button>Log In</button> -->
+        </form>
+        <span id="greeting" class="hidden"></span>
+      </div>
 
-    <!-- 바디 이름 | 사는곳, 시계 (타이틀) -->
-    <div class="body__name text__body-name">
-      <div>
-        <span>YOUR LOCATION</span>
-        <div class="body__name__borderLine"></div>
+      <!-- 바디 이름 | 사는곳, 시계 (타이틀), title.css -->
+      <div class="body__name text__body-name">
+        <div>
+          <span>YOUR LOCATION</span>
+          <div class="body__name__borderLine"></div>
+        </div>
+        <div>
+          <span>CURRENT TIME</span>
+          <div class="body__name__borderLine"></div>
+        </div>
       </div>
-      <div>
-        <span>CURRENT TIME</span>
-        <div class="body__name__borderLine"></div>
-      </div>
-    </div>
 
-    <!-- 바디 메인 위 | 사는곳, 시계 -->
-    <div class="body__main-upper text__body-main-upper">
-      <div>
-        <span class="weather-location"></span>
+      <!-- 바디 메인 위 | 사는곳, 시계, main-upper.css -->
+      <div class="body__main-upper text__body-main-upper">
+        <div>
+          <span class="weather-location">Loading..</span>
+        </div>
+        <div class="body__main-upper__box">
+          <span class="clock2">00:00:00</span>
+          <a href="https://dribbble.com/shots/23530187-CONF-Website-Concept">
+            <span>Design Source Here</span>
+          </a>
+        </div>
       </div>
-      <div>
-        <h2 id="clock">00:00:00</h2>
-      </div>
-    </div>
 
-    <!-- 바디 메인 아래 | 날씨 외 정보, 투두리스트 -->
-    <div class="body__main-lower">
-      <div class="body__main-lower__box">
-        <div class="body__main-lower__box2">
-          <span>test</span>
+      <!-- 바디 메인 아래 | 날씨 외 정보, 투두리스트, main-lower.css -->
+      <div class="body__main-lower">
+        <div class="body__main-lower__box">
+          <div class="body__main-lower__box2">
+            <div class="body__main-lower__box3-1">
+              <div
+                class="body__main-lower__box3-1__box1 text__body-main-lower1"
+              >
+                <span>WEATHER</span>
+              </div>
+              <div
+                class="body__main-lower__box3-1__box2 text__body-main-lower2"
+              >
+                <form id="todo-form">
+                  <input
+                    class="input-toDo"
+                    type="text"
+                    placeholder="Write a To Do and Press Enter"
+                    required
+                  />
+                </form>
+                <span>Todo List</span>
+              </div>
+            </div>
+            <div class="body__main-lower__box3-2"></div>
+            <div class="body__main-lower__box3-3">
+              <div class="body__main-lower__box3-3__box1">
+                <div class="body__main-lower__box3-3__box1__weather1">
+                  <span class="weather-climate text__body-main-lower2"
+                    >Loading..</span
+                  >
+                  <span
+                    class="weather-climate-detail text__body-main-lower4"
+                  ></span>
+                </div>
+                <div class="body__main-lower__box3-3__box1__weather2">
+                  <span class="weather-temp-ave text__body-main-lower1"></span>
+                  <span class="weather-temp-max text__body-main-lower1"></span>
+                  <span class="weather-temp-min text__body-main-lower1"></span>
+                </div>
+                <div class="body__main-lower__box3-3__box1__weather3">
+                  <span class="weather-humid text__body-main-lower1"></span>
+                </div>
+              </div>
+              <div
+                class="body__main-lower__box3-3__box2 text__body-main-lower3"
+              >
+                <div class="body__main-lower__box3-3__box2__box"></div>
+                <ul id="todo-list"></ul>
+                <!-- <span>대충 투두 올라간거</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 바디 명언 | 명언, quotes.css -->
+      <div class="body__quotes">
+        <div>
+          <span class="body__quotes-author text__body-quotes-author"></span>
+        </div>
+        <div>
+          <span class="body__quotes-text text__body-quotes-text"></span>
         </div>
       </div>
     </div>
-
-    <!-- 바디 명언 | 명언 -->
-    <div class="body__quotes">
-      <div>
-        <span class="body__quotes-author text__body-quotes-author"></span>
-      </div>
-      <div>
-        <span class="body__quotes-text text__body-quotes-text"></span>
-      </div>
-    </div>
-
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
-
-    <div id="weather">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <img src="" />
 
     <script src="js/components/key.js"></script>
     <script src="js/background.js"></script>
