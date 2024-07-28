@@ -5,7 +5,7 @@ This is a personal project to create a clone of the Chrome extension momentum.
 I studied with the free *vanilla JS course* provided by **nomad coder.**
 ## Link
 ### github publish link
-*(working..)*
+https://wyattriver3867.github.io/vanilla_JS_challenge/
 ### nomad coder page
 https://nomadcoders.co/
 ### Course Info
