@@ -1,4 +1,6 @@
-// API_KEY 변수는 보안을 위해 key.js에 저장되어 .gitignore 처리를 받음.
+// openweathermap.org Current Weather Data API
+// https://openweathermap.org/current
+const API_KEY = "cdfff0f0cafb3a370e239998c7f9deed";
 
 function onGeoOk(data) {
   const lat = data.coords.latitude;
