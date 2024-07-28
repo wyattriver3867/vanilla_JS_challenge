@@ -1,0 +1,13 @@
+/* google fonts */
+
+/* reset, variables */
+@import "reset.css";
+@import "variables.css";
+
+/* Components */
+@import "components/background.css";
+@import "components/clock.css";
+@import "components/greetings.css";
+@import "components/quotes.css";
+@import "components/todo.css";
+@import "components/weather.css";
