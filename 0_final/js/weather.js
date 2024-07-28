@@ -9,7 +9,7 @@ function onGeoOk(data) {
   const test = fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      const city = document.querySelector("#weather span:first-child");
+      const city = document.querySelector(".weather-location");
       const weather = document.querySelector("#weather span:nth-child(2)");
       const weatherDesc = document.querySelector("#weather span:nth-child(3)");
       const temp = document.querySelector("#weather span:nth-child(4)");
@@ -17,7 +17,7 @@ function onGeoOk(data) {
       const tempMin = document.querySelector("#weather span:nth-child(6)");
       const humidity = document.querySelector("#weather span:nth-child(7)");
 
-      city.innerText = `동네 ${data.name}`;
+      city.innerText = `${data.name}`;
       weather.innerText = `날씨 ${data.weather[0].main}`;
       weatherDesc.innerText = `${data.weather[0].description}한 날입니다.`;
       temp.innerText = `평균 온도는 ${data.main.temp}°C입니다.`;

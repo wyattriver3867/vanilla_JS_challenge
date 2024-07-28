@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Momentum-Clone</title>
   </head>
-  <body>
+  <body class="body-setting text-normal">
     <form class="hidden" id="login-form">
       <input
         required
@@ -17,10 +17,51 @@
       />
       <button>Log In</button>
     </form>
+    <!-- 로그인, greetings.css -->
+    <div class="body__logIn text-title">
+      <span id="greeting" class="hidden"></span>
+    </div>
 
-    <h2 id="clock">00:00:00</h2>
+    <!-- 바디 이름 | 사는곳, 시계 (타이틀) -->
+    <div class="body__name text__body-name">
+      <div>
+        <span>YOUR LOCATION</span>
+        <div class="body__name__borderLine"></div>
+      </div>
+      <div>
+        <span>CURRENT TIME</span>
+        <div class="body__name__borderLine"></div>
+      </div>
+    </div>
 
-    <h1 id="greeting" class="hidden"></h1>
+    <!-- 바디 메인 위 | 사는곳, 시계 -->
+    <div class="body__main-upper text__body-main-upper">
+      <div>
+        <span class="weather-location"></span>
+      </div>
+      <div>
+        <h2 id="clock">00:00:00</h2>
+      </div>
+    </div>
+
+    <!-- 바디 메인 아래 | 날씨 외 정보, 투두리스트 -->
+    <div class="body__main-lower">
+      <div class="body__main-lower__box">
+        <div class="body__main-lower__box2">
+          <span>test</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 바디 명언 | 명언 -->
+    <div class="body__quotes">
+      <div>
+        <span class="body__quotes-author text__body-quotes-author"></span>
+      </div>
+      <div>
+        <span class="body__quotes-text text__body-quotes-text"></span>
+      </div>
+    </div>
 
     <form id="todo-form">
       <input type="text" placeholder="Write a To Do and Press Enter" required />

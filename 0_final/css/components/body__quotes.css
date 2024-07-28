@@ -1,0 +1,22 @@
+.body__quotes {
+  margin: 15px 0px 0px 0px;
+  height: 85px;
+  border: solid 4px gray;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body__quotes div:first-child {
+  width: 25%;
+}
+
+.body__quotes div:last-child {
+  width: 75%;
+}
+
+.body__quotes div:first-child span {
+  padding: 0px 0px 0px 45px;
+}

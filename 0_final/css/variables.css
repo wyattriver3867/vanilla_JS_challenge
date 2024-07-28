@@ -1,0 +1,9 @@
+:root {
+  --horizontal-space: 5.7vw;
+  --border-gray: 2.5px solid gray;
+
+  --yellow: #fae100;
+  --main-border: 5px solid rgba(0, 0, 0, 0.2);
+  --color-gray: rgba(0, 0, 0, 0.5);
+  --color-lessBlack: rgba(0, 0, 0, 0.8);
+}
